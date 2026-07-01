@@ -1,3 +1,10 @@
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from src.graph_search import bfs, dfs
 
 
@@ -6,13 +13,15 @@ def main():
         "A": ["B", "C"],
         "B": ["D", "E"],
         "C": ["F"],
-        "D": [],
-        "E": ["F"],
-        "F": [],
+        "D": ["G"],
+        "E": ["G"],
+        "F": ["G"],
+        "G": [],
     }
 
-    print("BFS A -> F:", bfs(graph, "A", "F", debug=True))
-    print("DFS A -> F:", dfs(graph, "A", "F", debug=True))
+    print("=== Búsqueda en grafo ===")
+    print("BFS:", bfs(graph, "A", "G"))
+    print("DFS:", dfs(graph, "A", "G"))
 
 
 if __name__ == "__main__":

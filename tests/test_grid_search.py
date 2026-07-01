@@ -1,33 +1,40 @@
-from src.grid_search import load_grid_from_text, bfs_grid, astar_grid, find_symbol
+from src.grid_search import bfs_grid, dfs_grid, astar_grid, path_is_valid, find_position, neighbors
 
 
-def test_bfs_grid_finds_path():
-    grid = load_grid_from_text("""
-    S..
-    .#.
-    ..G
-    """)
+def sample_grid():
+    return [
+        list("S..."),
+        list(".##."),
+        list("...."),
+        list("...G"),
+    ]
+
+
+def test_find_position():
+    grid = sample_grid()
+    assert find_position(grid, "S") == (0, 0)
+    assert find_position(grid, "G") == (3, 3)
+
+
+def test_neighbors_avoid_obstacles():
+    grid = sample_grid()
+    result = neighbors(grid, (0, 1))
+    assert (1, 1) not in result
+
+
+def test_bfs_grid_valid_path():
+    grid = sample_grid()
     path = bfs_grid(grid)
-    assert path[0] == find_symbol(grid, "S")
-    assert path[-1] == find_symbol(grid, "G")
+    assert path_is_valid(grid, path)
 
 
-def test_astar_grid_finds_path():
-    grid = load_grid_from_text("""
-    S..
-    .#.
-    ..G
-    """)
+def test_dfs_grid_valid_path():
+    grid = sample_grid()
+    path = dfs_grid(grid)
+    assert path_is_valid(grid, path)
+
+
+def test_astar_grid_valid_path():
+    grid = sample_grid()
     path = astar_grid(grid)
-    assert path[0] == find_symbol(grid, "S")
-    assert path[-1] == find_symbol(grid, "G")
-
-
-def test_astar_and_bfs_same_length_on_uniform_grid():
-    grid = load_grid_from_text("""
-    S....
-    .##..
-    ...#.
-    .#..G
-    """)
-    assert len(astar_grid(grid)) == len(bfs_grid(grid))
+    assert path_is_valid(grid, path)

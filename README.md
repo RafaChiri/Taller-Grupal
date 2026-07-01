@@ -9,11 +9,11 @@ Este repositorio contiene una guía completa para aprender, programar, probar y 
 ## Resultados de aprendizaje
 Al finalizar el taller, el estudiante podrá:
 
-1. Representar un problema de búsqueda usando grafos y mapas de cuadrícula.
-2. Implementar BFS, DFS y A\* en Python.
-3. Depurar algoritmos de manera incremental usando trazas, pruebas pequeñas y validación de estados.
-4. Comparar BFS, DFS y A\* según completitud, optimalidad, costo y memoria.
-5. Explicar qué algoritmo conviene usar según el tipo de problema.
+- Representar un problema de búsqueda usando grafos y mapas de cuadrícula.
+- Implementar BFS, DFS y A* en Python.
+- Depurar algoritmos de manera incremental usando trazas, pruebas pequeñas y validación de estados.
+- Comparar BFS, DFS y A* según completitud, optimalidad, costo y memoria.
+- Explicar qué algoritmo conviene usar según el tipo de problema.
 
 ## Estructura del repositorio
 
@@ -97,8 +97,7 @@ pytest
 |---|---|---:|---:|
 | BFS | Explora por niveles | Sí, si todos los costos son iguales | No |
 | DFS | Explora profundo antes de retroceder | No | No |
-| A\* | Combina costo acumulado + estimación al objetivo | Sí, si la heurística es admisible | Sí |
+| A* | Combina costo acumulado + estimación al objetivo | Sí, si la heurística es admisible | Sí |
 
 ## Recomendación para estudiantes
-No intentes programar BFS, DFS y A\* completos al mismo tiempo. Primero crea el grafo, luego imprime vecinos, después visita nodos, luego reconstruye el camino y recién ahí te permites sentir que la máquina te obedece.
-
+No intentes programar BFS, DFS y A* completos al mismo tiempo. Primero crea el grafo, luego imprime vecinos, después visita nodos, luego reconstruye el camino y recién ahí te permites sentir que la máquina te obedece.

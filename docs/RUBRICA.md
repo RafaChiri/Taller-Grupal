@@ -9,11 +9,11 @@
 | Depuración incremental | 15 | Incluye trazas, pruebas pequeñas y validación de errores. |
 | Pruebas y evidencias | 10 | Incluye mapas, salidas de consola o pruebas automatizadas. |
 | Explicación final | 10 | Compara algoritmos y justifica cuándo usar cada uno. |
-| Total | 100 |  |
+| **Total** | **100** |  |
 
 ## Criterio de logro
 
-- 90 a 100: Excelente, código claro, probado y explicado.
-- 70 a 89: Cumple, pero necesita mejorar pruebas o explicación.
-- 50 a 69: Funciona parcialmente, con errores de lógica o estructura.
-- Menos de 50: No demuestra implementación suficiente.
+- **90 a 100:** Excelente, código claro, probado y explicado.
+- **70 a 89:** Cumple, pero necesita mejorar pruebas o explicación.
+- **50 a 69:** Funciona parcialmente, con errores de lógica o estructura.
+- **Menos de 50:** No demuestra implementación suficiente.
